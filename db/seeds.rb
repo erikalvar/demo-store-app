@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Supplier.create(name: "Farm Supply Inc.", email: "farmsupplyinc@gmail.com", address: "22 Smith St, Madison, WI 23442", phone_number: 568 - 222 - 5555)
+
+Product.create(name: "4 in. ceramic pots", description: "4 in. diameter by 4 in. height ceramic pots. Made in Indiana.", price: 2.55, units: 50, supplier_id: 1)
+Product.create(name: "6 in. ceramic pots", description: "6 in. diameter by 6 in. height ceramic pots. Made in Indiana.", price: 3.80, units: 30, supplier_id: 1)
+Product.create(name: "8 in. ceramic pots", description: "8 in. diameter by 8 in. height ceramic pots. Made in Indiana.", price: 5.05, units: 0, supplier_id: 1)
+
+Category.create(name: "Garden Supplies")
+Category.create(name: "Pots and Planters")
+Category.create(name: "Fertilizer")
+Category.create(name: "Dirt and Soil")
+Category.create(name: "Tools")
+Category.create(name: "Accessories")
+Category.create(name: "Home Decor")
+Category.create(name: "Furniture")
+Category.create(name: "Seeds")
+Category.create(name: "Vegetables")
+Category.create(name: "Herbs")
+Category.create(name: "Plants")
+
+ProductCategory.create(product_id: 1, catgory_id: 1)
+ProductCategory.create(product_id: 1, catgory_id: 2)
