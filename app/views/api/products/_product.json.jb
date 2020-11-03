@@ -1,0 +1,8 @@
+{
+  id: product.id,
+  name: product.name,
+  description: product.description,
+  price: product.price,
+  units: product.units,
+  supplier_id: product.supplier_id,
+}
