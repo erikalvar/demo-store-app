@@ -20,7 +20,7 @@ class Api::ProductsController < ApplicationController
     if @product.save
       render "show.json.jb"
     else
-      render json: { message: "error" }
+      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -36,7 +36,7 @@ class Api::ProductsController < ApplicationController
     if @product.save
       render "show.json.jb"
     else
-      render json: { message: "error" }
+      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -46,7 +46,7 @@ class Api::ProductsController < ApplicationController
     if @product.delete
       render json: { message: "Product successfully deleted" }
     else
-      render json: { message: "error" }
+      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 end

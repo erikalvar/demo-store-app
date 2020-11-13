@@ -20,7 +20,7 @@ class Api::SuppliersController < ApplicationController
     if @supplier.save
       render "show.json.jb"
     else
-      render json: { message: "error" }
+      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -35,7 +35,7 @@ class Api::SuppliersController < ApplicationController
     if @supplier.save
       render "show.json.jb"
     else
-      render json: { message: "error" }
+      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -45,7 +45,7 @@ class Api::SuppliersController < ApplicationController
     if @supplier.delete
       render json: { message: "Supplier successfully deleted." }
     else
-      render json: { message: "error" }
+      render json: {errors: @order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 end
