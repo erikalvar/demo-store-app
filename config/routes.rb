@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
+    post "/users" => "users#create"
+
+    post "/sessions" => "sessions#create"
+
     get "/suppliers" => "suppliers#index"
     post "/suppliers" => "suppliers#create"
     get "/suppliers/:id" => "suppliers#show"
