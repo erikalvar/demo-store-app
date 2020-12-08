@@ -15,5 +15,11 @@ Rails.application.routes.draw do
     get "/products/:id" => "products#show"
     patch "/products/:id" => "products#update"
     delete "/products/:id" => "products#destroy"
+
+    get "/categories" => "categories#index"
+    # post "/categories" => "categories#create"
+    # get "/categories" => "categories#show"
+    # patch "/categories" => "categories#update"
+    # delete "/categories" => "categories#destroy"
   end
 end
