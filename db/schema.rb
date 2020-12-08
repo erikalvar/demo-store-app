@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_180348) do
+ActiveRecord::Schema.define(version: 2020_12_08_214940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_180348) do
     t.text "specs"
     t.string "origin"
     t.integer "length"
-    t.integer "weigth"
+    t.integer "weight"
     t.string "category"
     t.text "sub_category"
     t.boolean "current"
