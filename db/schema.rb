@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_214940) do
+ActiveRecord::Schema.define(version: 2020_12_09_185413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_214940) do
     t.string "category"
     t.text "sub_category"
     t.boolean "current"
+    t.integer "strings"
   end
 
   create_table "suppliers", force: :cascade do |t|
